@@ -1,1 +1,1 @@
-# kata
+# minimal-webpack

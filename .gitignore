@@ -1,0 +1,3 @@
+.idea/
+bin/app.bundle.js*
+node_modules/

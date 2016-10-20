@@ -1,0 +1,40 @@
+.home {
+  margin-top: 2em;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 2em;
+}
+
+.home-fade {
+  padding: 8px;
+  text-align: center;
+  border-radius: 8px;
+  transition: all linear 0.5s;
+  background-color: lightblue;
+  height: 100px;
+  width: 50%;
+  position: relative;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  font-size: 1.5em;
+}
+
+.ng-hide {
+  height: 0;
+  width: 0;
+  background-color: transparent;
+  top: -200px;
+  left: 200px;
+  opacity: 0;
+  font-size: .1em;
+}
+
+.copyright {
+  font-weight: bolder;
+}
+
+
+
+.result-text {
+  margin-top: 10px;
+}
