@@ -1,6 +1,8 @@
 {
   "items": {
     "temp": "temporary",
-    "name": "John Doe"
+    "name": "John Doe",
+    "ambientia": "Ambientia!",
+    "janne": "Janne did this!"
   }
 }

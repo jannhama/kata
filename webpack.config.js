@@ -1,7 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
-//const occurence=webpack.optimize.OccurrenceOrderPlugin();
-//const dedupe=webpack.optimize.DedupePlugin();
 const webpack = require('webpack');
 const ngAnnotatePlugin = require('ng-annotate-webpack-plugin');
 
@@ -17,7 +15,7 @@ module.exports = {
         loaders: [
             {
                 test: /\.js$/,
-                exclude: /node_modules/,
+                exclude: /(\.test.js$|node_modules)/,
                 loader: 'babel-loader'
             },
             {

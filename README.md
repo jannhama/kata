@@ -13,4 +13,4 @@ However in this case we use only those two keywords defined in the tests.
 
 Input string must have "double quotes" around it otherwise find button stays disabled.
  
- (c) 2016 Janne Hämäläinen
+(c) 2016 Janne Hämäläinen

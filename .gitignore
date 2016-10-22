@@ -1,3 +1,7 @@
 .idea/
 bin/app.bundle.js*
+bin/*.woff*
+bin/*.ttf*
+bin/*.eot*
+bin/*.svg*
 node_modules/
