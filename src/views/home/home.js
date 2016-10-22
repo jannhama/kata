@@ -10,25 +10,20 @@
 
 // dictionary is loaded from JSON file
 import dict from './dict';
-import { algCheckDoubleQuotes,algSeekAndReplace } from './algorithm';
+import {algCheckDoubleQuotes, algSeekAndReplace} from './algorithm';
 
 // controller for this home page
 class HomeController {
     /* @ngInject */
     constructor($timeout) {
-        console.log('homectrl cons.');
         this.$timeout = $timeout;
         this.homeText = 'Dictionary "kata" example using ES6 & AngularJS';
         this.hideItem = true;
         this.queryString = '';
         this.result = '';
-        this.dict = this.dict=Object.assign({}, dict.items);
+        this.dict = this.dict = Object.assign({}, dict.items);
     }
 
-
-    setDictionary(dictionary) {
-        this.dict=Object.assign({}, dict.items);
-    }
 
     /**
      * Check that input string has both starting and ending double quotes
@@ -36,7 +31,7 @@ class HomeController {
      * @returns {boolean|*}
      */
     checkDoubleQuotes(source) {
-        return algCheckDoubleQuotes(source);
+        return (algCheckDoubleQuotes(source) && this.hideItem);
     }
 
 
@@ -47,14 +42,12 @@ class HomeController {
      * @param dictionary
      */
     seekAndReplace(searchString, dictionary) {
-
-        this.result = algSeekAndReplace(searchString,dictionary);
+        this.result = algSeekAndReplace(searchString, dictionary);
         this.hideItem = false;
         // small delay to before hiding the results
         this.$timeout(() => {
             this.hideItem = true
         }, 4000);
-        // result will be also returned although not used in this example.
     }
 }
 
