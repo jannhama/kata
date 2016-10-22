@@ -2,7 +2,33 @@
 <div class="row">
     <div class="col-md-12 home">
         {{ctrl.homeText}}
-
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6 instructions">
+        <ul>
+            <li>
+                Input needs to have double quotes - othewise search & search button are disabled
+            </li>
+            <li>
+                Correct tags are also enclosed with dollar sign e.g. "$temp$"
+            </li>
+            <li>
+                Input or parts of it that cannot be matched are returned as is.
+            </li>
+        </ul>
+        Example strings:
+        <ul>
+            <li>
+                "$temp$"
+            </li>
+            <li>
+                "$temp$ here comes the name $name$"
+            </li>
+            <li>
+                "$ambientia$"
+            </li>
+        </ul>
     </div>
 </div>
 <div class="row">
@@ -17,10 +43,12 @@
                 </div>
                 <div class="row">
                     <div class="col-md-8">
-                        <input type="text" id="queryinput" class="form-control" ng-model="ctrl.queryString">
+                        <input type="text" id="queryinput" class="form-control query-input" ng-model="ctrl.queryString" placeholder='Enter query e.g. "$temp$"'>
                     </div>
                     <div class="col-md-4">
-                        <button class="btn btn-default" ng-disabled="!ctrl.checkDoubleQuotes(ctrl.queryString)" ng-click="ctrl.seekAndReplace(ctrl.queryString,ctrl.dict)">Search</button>
+                        <button class="btn btn-default" ng-disabled="!ctrl.checkDoubleQuotes(ctrl.queryString)"
+                                ng-click="ctrl.seekAndReplace(ctrl.queryString,ctrl.dict)">Search
+                        </button>
                     </div>
                 </div>
 
