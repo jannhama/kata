@@ -1,51 +1,54 @@
 </br>
 <div class="row">
-    <div class="col-md-12 home">
+    <div class="col-xs-12 col-md-12 home">
         {{ctrl.homeText}}
     </div>
 </div>
 <div class="row">
-    <div class="col-md-6 instructions">
-        <ul>
-            <li>
-                Input needs to have double quotes - othewise search & search button are disabled
-            </li>
-            <li>
-                Correct tags are also enclosed with dollar sign e.g. "$temp$"
-            </li>
-            <li>
-                Input or parts of it that cannot be matched are returned as is.
-            </li>
-        </ul>
-        Example strings:
-        <ul>
-            <li>
-                "$temp$"
-            </li>
-            <li>
-                "$temp$ here comes the name $name$"
-            </li>
-            <li>
-                "$janne$"
-            </li>
-        </ul>
+    <div class="col-xs-12 col-md-12">
+        <div class="instructions">
+            <ul>
+                <li>
+                    Input needs to have double quotes - othewise search & search button are disabled
+                </li>
+                <li>
+                    Correct tags are also enclosed with dollar sign e.g. "$temp$"
+                </li>
+                <li>
+                    Input or parts of it that cannot be matched are returned as is.
+                </li>
+            </ul>
+            Example strings:
+            <ul>
+                <li>
+                    "$temp$"
+                </li>
+                <li>
+                    "$temp$ here comes the name $name$"
+                </li>
+                <li>
+                    "$janne$"
+                </li>
+            </ul>
+        </div>
     </div>
 </div>
 <div class="row">
-    <div class="col-md-6">
+    <div class="col-xs-12 col-md-12">
         <form>
             <div class="form-group">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-xs-12 col-md-6">
                         <label for="queryinput">Enter query string</label>
                     </div>
-                    <div class="col-md-6"></div>
+                    <div class="col-xs-12 col-md-6"></div>
                 </div>
                 <div class="row">
-                    <div class="col-md-8">
-                        <input type="text" id="queryinput" class="form-control query-input" ng-model="ctrl.queryString" placeholder='Enter query e.g. "$temp$"'>
+                    <div class="col-xs-12 col-md-6">
+                        <input type="text" id="queryinput" class="form-control query-input" ng-model="ctrl.queryString"
+                               placeholder='Enter query e.g. "$temp$"'>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-xs-12 col-md-6">
                         <button class="btn btn-default" ng-disabled="!ctrl.checkDoubleQuotes(ctrl.queryString)"
                                 ng-click="ctrl.seekAndReplace(ctrl.queryString,ctrl.dict)">Search
                         </button>
@@ -55,14 +58,14 @@
             </div>
         </form>
     </div>
-    <div class="col-md-6>"></div>
+    <div class="col-xs-12 col-md-6>"></div>
 
 </div>
 <div class="row">
-    <div class="col-md-6">
+    <div class="col-xs-12 col-md-6">
         <span class="copyright">&copy; 2016 Janne Hämäläinen</span>
     </div>
-
+    <div class="col-xs-12 col-md-6>"></div>
 </div>
 <div ng-hide="ctrl.hideItem" class="home-fade">
     <div class="result-text">
