@@ -58,7 +58,7 @@ export function algSeekAndReplace(searchString, dictionary) {
         })
     }
 
-    // result will be also returned although not used in this example.
+    // result will returned.
     return result;
 }
 
